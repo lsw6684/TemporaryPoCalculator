@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Processor</title>
+    <!-- 부트스트랩 CSS 추가 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+<div class="container mt-5">
+    <h2>PO 계산기</h2>
+    <div class="input-group mb-3">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="fileUpload" accept=".xls, .xlsx, .csv">
+            <label class="custom-file-label" for="fileUpload">파일 선택</label>
+        </div>
+    </div>
+    <!--업로드된 파일명 표시 -->
+    <div id="uploadFileName" class="mt-3 margin-20" style="display:none;"></div>
+    <button id="btnCalculate" class="btn btn-primary margin-20" onclick="calculateFile()" style="display: none;">Calculate</button>
+
+
+    <button id="downloadBtn" class="btn btn-success margin-20" style="display:none;">다운로드</button>
+</div>
+<div id="alertWarn" style="display: none;">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+</div>
+
+<div id="alertBasic" style="display: none;">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        계산이 성공적으로 완료되었습니다.
+    </div>
+</div>
+
+<div id="guideImage" class="centered">
+    <img src = "images/guide.png" alt = "가이드" width="850">
+</div>
+<script src="script.js"></script>
+</body>
+</html>
